@@ -202,8 +202,9 @@ RegisterCommand(Config.CommnandEntorno, function(source, args)
 
 
   if args[1] == nil then
-    TriggerEvent('chatMessage', '[^1ENTORNO^0]', {255,255,255}, 'Has enviado un entorno.')
+    TriggerEvent('chatMessage', '[^1ENTORNO^0]', {255,255,255}, 'Por favor describe el entorno.')
   else
+    TriggerEvent('chatMessage', '[^1ENTORNO^0]', {255,255,255}, 'Has enviado un entorno.')
     TriggerServerEvent('enp-entorno:entorno:sendNotify', msg, location)
     TriggerServerEvent('enp-entorno:alert', message, x, y, z)
   end
